@@ -1,5 +1,6 @@
 %Load a Data Set
-load energyDataset.mat
+scriptDir = fileparts(mfilename('fullpath'));
+load(fullfile(scriptDir, '..', 'data', 'energyDataset.mat'))
 
 %We will use every possible variable to create a multi-linear regression
 %model of Energy Consumption
@@ -20,3 +21,15 @@ end
 
 %Compare this MSE to the single variable linear regression
 MSE = MSE/N;
+
+figure;
+plot(EnergyConsumption, 'o', 'MarkerSize', 6, 'LineWidth', 1.5);
+hold on;
+plot(EnergyModel, 'x', 'MarkerSize', 6, 'LineWidth', 1.5);
+xlabel('Sample Index');
+ylabel('Energy Consumption (kWh)');
+title(['Multi-Linear Regression - MSE: ' num2str(round(100*MSE)/100) 'kWh^2']);
+legend('Actual', 'Predicted', 'Location', 'best');
+grid on;
+
+saveas(gcf, fullfile(scriptDir, '..', 'images', 'linearRegression_multi.png'));

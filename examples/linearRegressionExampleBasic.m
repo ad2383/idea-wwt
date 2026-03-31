@@ -1,5 +1,6 @@
 %Load a Data Set
-load energyDataset.mat
+scriptDir = fileparts(mfilename('fullpath'));
+load(fullfile(scriptDir, '..', 'data', 'energyDataset.mat'))
 x= SquareFootage; %We will use square footage to train this model.
 %Feel free to change this variable to another one found in the workspace
 %when you load energyDataset.mat
@@ -34,3 +35,5 @@ title(['Linear Regression Model - Square Footage predicting' ...
     ' Energy Consumption - MSE: ' num2str(round(100*MSE)/100) 'kWh^2'])
 
 legend('Original Data','Model','Error Margins','Location','northwest')
+
+saveas(gcf, fullfile(scriptDir, '..', 'images', 'linearRegression_basic.png'));
