@@ -1,0 +1,43 @@
+>> wwt
+Linear Reg - DO_1 RMSE: 0.2309
+Linear Reg - DO_2 RMSE: 0.3175
+Linear Reg - DO_3 RMSE: 0.4852
+Linear Reg - NO3 RMSE: 1.6423
+Linear Reg - NH4 RMSE: 1.5339
+
+Generalized Linear Reg - DO_1 RMSE: 0.2309
+Generalized Linear Reg - DO_2 RMSE: 0.3175
+Generalized Linear Reg - DO_3 RMSE: 0.4852
+Generalized Linear Reg - NO3 RMSE: 1.6423
+Generalized Linear Reg - NH4 RMSE: 1.5339
+
+Gaussian Process Reg - DO_1 RMSE: 0.2070
+Gaussian Process Reg - DO_2 RMSE: 0.2757
+Gaussian Process Reg - DO_3 RMSE: 0.3656
+Gaussian Process Reg - NO3 RMSE: 1.5100
+Gaussian Process Reg - NH4 RMSE: 1.2373
+
+Support Vector Machine - DO_1 RMSE: 0.5670
+Support Vector Machine - DO_2 RMSE: 2.1762
+Support Vector Machine - DO_3 RMSE: 7.4126
+Support Vector Machine - NO3 RMSE: 6.0588
+Support Vector Machine - NH4 RMSE: 6.2921
+
+Decision Tree - DO_1 RMSE: 0.2157
+Decision Tree - DO_2 RMSE: 0.3575
+Decision Tree - DO_3 RMSE: 0.3596
+Decision Tree - NO3 RMSE: 1.9181
+Decision Tree - NH4 RMSE: 1.6482
+
+Ensemble of Learners - DO_1 RMSE: 0.2434
+Ensemble of Learners - DO_2 RMSE: 0.3522
+Ensemble of Learners - DO_3 RMSE: 0.3674
+Ensemble of Learners - NO3 RMSE: 1.7644
+Ensemble of Learners - NH4 RMSE: 1.5323
+
+Generalized Additive Model - DO_1 RMSE: 0.2331
+Generalized Additive Model - DO_2 RMSE: 0.3235
+Generalized Additive Model - DO_3 RMSE: 0.3961
+Generalized Additive Model - NO3 RMSE: 1.5898
+Generalized Additive Model - NH4 RMSE: 1.4600
+>> 
