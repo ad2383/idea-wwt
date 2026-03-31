@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A([Start]) --> B
 
@@ -33,3 +34,4 @@ flowchart TD
     end
 
     M --> N([Best model recommendation])
+```
