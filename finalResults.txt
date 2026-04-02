@@ -1,0 +1,67 @@
+Training...
+Trained: Linear Regression
+Trained: Generalized Linear
+Trained: Gaussian Process
+Trained: Support Vector Machine
+Trained: Decision Tree
+Trained: Ensemble
+Trained: Generalized Additive
+RMSE results:
+            Algorithm              DO_1       DO_2       DO_3       NO3       NH4  
+    __________________________    _______    _______    _______    ______    ______
+
+    {'Linear Regression'     }     0.2079    0.25058    0.46356    1.6248    1.5985
+    {'Generalized Linear'    }     0.2079    0.25058    0.46356    1.6248    1.5985
+    {'Gaussian Process'      }    0.21674    0.24114    0.32447    1.4233    1.3217
+    {'Support Vector Machine'}     2.9788      3.187      1.364    7.8961    4.5631
+    {'Decision Tree'         }     0.2216    0.34098    0.30711    1.7907    1.6209
+    {'Ensemble'              }    0.21784    0.29103    0.32425    1.7613    1.6276
+    {'Generalized Additive'  }    0.20315    0.25636    0.36861    1.5196    1.4948
+
+Elapsed time results:
+            Algorithm             TotalSeconds
+    __________________________    ____________
+
+    {'Linear Regression'     }      0.44646   
+    {'Generalized Linear'    }      0.19603   
+    {'Gaussian Process'      }       47.419   
+    {'Support Vector Machine'}       659.64   
+    {'Decision Tree'         }      0.68491   
+    {'Ensemble'              }       4.5774   
+    {'Generalized Additive'  }       6.4654   
+
+Split ratios...
+Tested: 50% split
+Tested: 60% split
+Tested: 70% split
+Tested: 80% split
+Tested: 90% split
+     Split     Linear Regression    Generalized Linear    Gaussian Process    Support Vector Machine    Decision Tree    Ensemble    Generalized Additive
+    _______    _________________    __________________    ________________    ______________________    _____________    ________    ____________________
+
+    {'50%'}         0.24158              0.24158              0.22743                 6.2911               0.24003       0.24449           0.23768       
+    {'60%'}         0.22644              0.22644              0.24539                0.58652               0.24855        0.2271           0.22051       
+    {'70%'}         0.23431              0.23431              0.20652                 4.4854                 0.236       0.25258           0.22811       
+    {'80%'}          0.2564               0.2564              0.23553                 0.9094               0.25242       0.25345           0.24574       
+    {'90%'}         0.21686              0.21686              0.21136                0.58681               0.23229       0.24153            0.2125       
+
+Plotting...
+  Saved 7 plots to images/
+Normalization...
+Trained (normalized): Linear Regression
+Trained (normalized): Generalized Linear
+Trained (normalized): Gaussian Process
+Trained (normalized): Support Vector Machine
+Trained (normalized): Decision Tree
+Trained (normalized): Ensemble
+Trained (normalized): Generalized Additive
+            Algorithm             Original    Normalized    ChangePct
+    __________________________    ________    __________    _________
+
+    {'Linear Regression'     }    0.82907      0.82907              0
+    {'Generalized Linear'    }    0.82907      0.82907              0
+    {'Gaussian Process'      }    0.70547      0.65432        -7.2505
+    {'Support Vector Machine'}     3.9978      0.87092        -78.215
+    {'Decision Tree'         }    0.85625      0.85254        -0.4334
+    {'Ensemble'              }    0.84441      0.84432      -0.010131
+    {'Generalized Additive'  }    0.76851      0.76851              0
