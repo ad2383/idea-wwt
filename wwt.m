@@ -3,6 +3,8 @@
 scriptDir = fileparts(mfilename('fullpath'));
 load(fullfile(scriptDir, 'data', 'waterTreatmentData.mat'))
 
+% inputs and outputs
+
 inputs = [Q_inf, Q_air_1, Q_air_2, Q_air_3, Q_air_4, Q_air_5, Temp];
 outputs = {DO_1, DO_2, DO_3, NO3, NH4};
 outputNames = {'DO_1', 'DO_2', 'DO_3', 'NO3', 'NH4'};
@@ -32,6 +34,8 @@ for i = 1:7
     disp(['  Trained: ' algorithmNames{i}]);
 end
 
+% error results
+
 disp('RMSE results:');
 rmseTable = [table(algorithmNames', 'VariableNames', {'Algorithm'}), ...
              array2table(rmseResults, 'VariableNames', outputNames)];
@@ -41,6 +45,8 @@ disp('Training time results:');
 timeTable = [table(algorithmNames', 'VariableNames', {'Algorithm'}), ...
              table(sum(timeResults, 2), 'VariableNames', {'TotalSeconds'})];
 disp(timeTable);
+
+% training and testing with different split ratios
 
 splitRatios = [0.5, 0.6, 0.7, 0.8, 0.9];
 rmseByRatio = zeros(5, 7);
@@ -79,6 +85,8 @@ trainStd  = std(inputs(trainIdx,  :));
 trainInputsNorm = (inputs(trainIdx, :) - trainMean) ./ trainStd;
 testInputsNorm  = (inputs(testIdx,  :) - trainMean) ./ trainStd;
 
+% normalization
+
 rmseNorm = zeros(7, 5);
 
 for i = 1:7
@@ -106,6 +114,8 @@ pctChange = (normAvg - origAvg) ./ origAvg * 100;
 normTable = table(algorithmNames', origAvg, normAvg, pctChange, ...
     'VariableNames', {'Algorithm','Original','Normalized','ChangePct'});
 disp(normTable);
+
+% plots
 
 pairs = {
     Q_air_3, 'Q_{air,3}', 'Qair3', '(m^3/day)', DO_1, 'DO_1';
@@ -202,6 +212,8 @@ for p = 1:nPairs
     disp(pairNormTable);
 end
 
+% functions
+
 function [rmse, elapsed, model] = trainAlgorithm(trainInputs, trainOutput, testInputs, testOutput, algoName)
     tic;
 
@@ -259,3 +271,4 @@ function plotWithErrors(inputCol, outputCol, algoName, imageDir, inputLabel, inp
     saveas(fig, fullfile(imageDir, folderName, fname));
     close(fig);
 end
+
